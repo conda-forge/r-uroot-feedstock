@@ -1,4 +1,4 @@
-{% set version = '2.0-10' %}
+{% set version = '2.1-0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,36 +10,23 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/uroot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/uroot/uroot_{{ version }}.tar.gz
-  sha256: 723649f95d3b2543486ec6d5d82cca5448a7e3b6df467287d1a5ee9d7f2e8e00
+  sha256: 3c02a9dadd22aa67a59e99007ab6f576dc428859fa746d3a8f3ffa2bb43d18c2
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_cxx') }}      # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}sed               # [win]
-    - {{posix}}grep              # [win]
-    - {{posix}}autoconf
-    - {{posix}}automake          # [not win]
-    - {{posix}}automake-wrapper  # [win]
-    - {{posix}}pkg-config
-    - {{posix}}make
-    - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
   host:
     - r-base
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
 
 test:
   commands:
@@ -51,9 +38,7 @@ about:
   license: GPL-2
   summary: Seasonal unit roots and seasonal stability tests. P-values based on response surface
     regressions are available for both tests. P-values based on bootstrap are available
-    for seasonal unit root tests. A parallel implementation of the bootstrap method
-    requires a CUDA capable GPU  with compute capability >= 3.0, otherwise a debugging
-    version fully coded in R is used.
+    for seasonal unit root tests.
   license_family: GPL2
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
@@ -63,20 +48,19 @@ extra:
     - conda-forge/r
 
 # Package: uroot
-# Version: 2.0-10
-# Date: 2019-06-18
+# Version: 2.1-0
+# Date: 2019-08-19
 # Title: Unit Root Tests for Seasonal Time Series
-# Authors@R: c( person(given = "Javier", family = "Lopez-de-Lacalle", role = c("aut"),  email = "javlacalle@yahoo.es"), person(given = c("Georgi", "N."), family = "Boshnakov",  role = c("cre"),  email = "georgi.boshnakov@manchester.ac.uk") )
+# Authors@R: c( person(given = "Javier", family = "Lopez-de-Lacalle", role = c("aut"), email = "javlacalle@yahoo.es"), person(given = c("Georgi", "N."), family = "Boshnakov", role = c("cre"), email = "georgi.boshnakov@manchester.ac.uk") )
 # Depends: R (>= 3.0.0), stats
-# SystemRequirements: nvcc (release >= 7.1) (NVIDIA Cuda Compiler driver)
 # Encoding: UTF-8
-# Description: Seasonal unit roots and seasonal stability tests. P-values based on response surface regressions are available for both tests. P-values based on bootstrap are available for seasonal unit root tests. A parallel implementation of the bootstrap method requires a CUDA capable GPU  with compute capability >= 3.0, otherwise a debugging version fully coded in R is used.
-# NeedsCompilation: yes
+# Description: Seasonal unit roots and seasonal stability tests. P-values based on response surface regressions are available for both tests. P-values based on bootstrap are available for seasonal unit root tests.
 # LazyData: yes
 # LazyDataCompression: xz
 # License: GPL-2
-# Packaged: 2019-06-18 07:00:59 UTC; georgi
+# NeedsCompilation: no
+# Packaged: 2019-08-19 14:23:27 UTC; georgi
 # Author: Javier Lopez-de-Lacalle [aut], Georgi N. Boshnakov [cre]
 # Maintainer: Georgi N. Boshnakov <georgi.boshnakov@manchester.ac.uk>
 # Repository: CRAN
-# Date/Publication: 2019-06-24 18:20:03 UTC
+# Date/Publication: 2019-08-19 18:10:03 UTC

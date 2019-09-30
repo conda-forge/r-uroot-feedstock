@@ -7,7 +7,7 @@ Package license: GPL-2
 
 Feedstock license: BSD 3-Clause
 
-Summary: Seasonal unit roots and seasonal stability tests. P-values based on response surface regressions are available for both tests. P-values based on bootstrap are available for seasonal unit root tests. A parallel implementation of the bootstrap method requires a CUDA capable GPU  with compute capability >= 3.0, otherwise a debugging version fully coded in R is used.
+Summary: Seasonal unit roots and seasonal stability tests. P-values based on response surface regressions are available for both tests. P-values based on bootstrap are available for seasonal unit root tests.
 
 
 
@@ -15,68 +15,13 @@ Current build status
 ====================
 
 
-<table>
-    
-  <tr>
-    <td>Azure</td>
+<table><tr><td>All platforms:</td>
     <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4280&branchName=master">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-uroot-feedstock?branchName=master">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_r_base3.5.1target_platformlinux-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4280&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-uroot-feedstock?branchName=master&jobName=linux&configuration=linux_r_base3.5.1target_platformlinux-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_r_base3.6target_platformlinux-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4280&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-uroot-feedstock?branchName=master&jobName=linux&configuration=linux_r_base3.6target_platformlinux-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_r_base3.5.1target_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4280&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-uroot-feedstock?branchName=master&jobName=osx&configuration=osx_r_base3.5.1target_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_r_base3.6target_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4280&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-uroot-feedstock?branchName=master&jobName=osx&configuration=osx_r_base3.6target_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_r_base3.5.1target_platformwin-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4280&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-uroot-feedstock?branchName=master&jobName=win&configuration=win_r_base3.5.1target_platformwin-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_r_base3.6target_platformwin-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4280&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-uroot-feedstock?branchName=master&jobName=win&configuration=win_r_base3.6target_platformwin-64" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4280&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-uroot-feedstock?branchName=master">
+      </a>
     </td>
   </tr>
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 </table>
 
 Current release info

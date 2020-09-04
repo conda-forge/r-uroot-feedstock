@@ -1,4 +1,4 @@
-{% set version = '2.1-0' %}
+{% set version = "2.1-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/uroot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/uroot/uroot_{{ version }}.tar.gz
-  sha256: 3c02a9dadd22aa67a59e99007ab6f576dc428859fa746d3a8f3ffa2bb43d18c2
+  sha256: bd7fd9e35928d09d0e8fae9e4359a2b2bca6e6865b278436319e2f91db0e4b37
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,11 +36,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=uroot
   license: GPL-2
-  summary: Seasonal unit roots and seasonal stability tests. P-values based on response surface
-    regressions are available for both tests. P-values based on bootstrap are available
-    for seasonal unit root tests.
+  summary: Seasonal unit roots and seasonal stability tests. P-values based on response surface regressions are available for both tests. P-values based on bootstrap are available for seasonal unit root tests.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
